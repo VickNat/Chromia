@@ -1,0 +1,11 @@
+blockchains:
+  my-rell-dapp:
+    module: main
+compile:
+  rellVersion: 0.12.0
+database:
+  host: 172.17.0.1
+  schema: schema_my_rell_dapp
+test:
+  modules:
+    - test

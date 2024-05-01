@@ -1,0 +1,17 @@
+blockchains:
+  book-review:
+    module: main
+    moduleArgs:
+      main:
+        admin_pubkey: "023C56A6890A7D456E671AC7A09ADAED8F5151A676988D504B18CF579AC401CEBA"
+compile:
+  rellVersion: 0.12.0
+database:
+  host: 172.17.0.1
+  schema: schema_book_review
+test:
+  modules:
+    - test
+  moduleArgs:
+    main:
+      admin_pubkey: "0359A8F2CE1BEF95F583169B7DF053AA227A93B2652B0A9C22975FEED638032610"
