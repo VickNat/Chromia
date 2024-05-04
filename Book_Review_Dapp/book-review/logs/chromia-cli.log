@@ -108,3 +108,17 @@ java.lang.RuntimeException: Could not auto-detect brid from http://localhost:774
 	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475) ~[clikt-jvm-4.2.0.jar:?]
 	at com.chromia.cli.tools.launcher.CliLauncher.catchingAllExceptionsMain(CliLauncher.kt:68) [chromia-cli-tools-0.16.3.jar:0.16.3]
 	at com.chromia.MainKt.main(main.kt:44) [chromia-cli-0.16.3.jar:0.16.3]
+ERROR 2024-05-04 09:06:43.768 - [main] CliLauncher Could not auto-detect brid from http://localhost:7740
+java.lang.RuntimeException: Could not auto-detect brid from http://localhost:7740
+	at com.chromia.cli.tools.blockchain.BridFetcher.fetchBlockchainRid(BridFetcher.kt:20) ~[chromia-cli-tools-0.18.2.jar:0.18.2]
+	at com.chromia.cli.util.LocalDeploymentOption.blockchainRidFromIid(deployTargetOptions.kt:77) ~[chromia-cli-0.18.2.jar:0.18.2]
+	at com.chromia.cli.util.LocalDeploymentOption.getBrid(deployTargetOptions.kt:74) ~[chromia-cli-0.18.2.jar:0.18.2]
+	at com.chromia.cli.command.TxCommand.run(TxCommand.kt:86) ~[chromia-cli-0.18.2.jar:0.18.2]
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:306) ~[clikt-jvm-4.2.0.jar:?]
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:319) ~[clikt-jvm-4.2.0.jar:?]
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:40) ~[clikt-jvm-4.2.0.jar:?]
+	at com.github.ajalt.clikt.core.CliktCommand.parse(CliktCommand.kt:458) ~[clikt-jvm-4.2.0.jar:?]
+	at com.github.ajalt.clikt.core.CliktCommand.parse$default(CliktCommand.kt:455) ~[clikt-jvm-4.2.0.jar:?]
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475) ~[clikt-jvm-4.2.0.jar:?]
+	at com.chromia.cli.tools.launcher.CliLauncher.catchingAllExceptionsMain(CliLauncher.kt:69) [chromia-cli-tools-0.18.2.jar:0.18.2]
+	at com.chromia.MainKt.main(main.kt:44) [chromia-cli-0.18.2.jar:0.18.2]

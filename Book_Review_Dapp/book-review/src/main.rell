@@ -28,7 +28,7 @@ struct module_args {
 
 entity book {
   key isbn: text;
-  title: text;
+  mutable title: text;
   author: text;
 }
 
@@ -51,6 +51,13 @@ operation create_book(isbn: text, title: text, author: text) {
   require(op_context.is_signer(adminPubkey), "Only admin can create books");
 
   create book ( .isbn = isbn, .title = title, .author = author );
+}
+
+operation update_book(isbn: text, title: text){
+  val adminPubkey = chain_context.args.admin_pubkey;
+  require(op_context.is_signer(adminPubkey), "Only admin can update books");
+
+  update book @ { .isbn == isbn }( .title = title );
 }
 
 query get_all_books() {
